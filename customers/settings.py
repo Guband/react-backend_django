@@ -30,7 +30,6 @@ ALLOWED_HOSTS = []
 from datetime import timedelta
 
 SIMPLE_JWT = {   
-    'AcCESS_TOKEN_LIFETIME': timedelta(minutes=15),
     'ROTATE_REFRESH_TOKENS': True, 
 }
 

@@ -7,13 +7,14 @@ class CustomerSerializer(serializers.ModelSerializer):
         model = Customer
         fields = '__all__'
 
-class UserSerializer(serializers.Serializer):
+class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = '__all__'
     
+
     def create(self, validated_data):
-        user = User.objects.create_user(
+        user = User.objects.create(
         username=validated_data['username'],
         email=validated_data['email']
         )
